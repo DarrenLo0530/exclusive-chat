@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+
+//Remove space between alerts and navbar
+.alert {
+    margin-bottom: 0;
+}
+
+//Apply spacing to navbar items
+.nav-item{
+    margin-left: 1rem;
+}
