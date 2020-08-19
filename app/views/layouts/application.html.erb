@@ -10,7 +10,6 @@
   </head>
 
   <body>
-    
     <% if flash.notice %>
         <div class= "alert alert-primary" role="alert">
             <%= notice %>
@@ -47,10 +46,12 @@
                 <% end %>
             </ul>
         </div>
-
     </nav>
 
-    
     <%= yield %>
+
+    <footer class="footer text-secondary bg-dark text-center">
+        <span>ExclusiveChat</span>
+    </footer>
   </body>
 </html>

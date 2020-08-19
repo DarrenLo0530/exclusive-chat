@@ -1,7 +1,7 @@
-<%= form_with model: @post do |f| %>
+<%= form_with model: @post, local: true do |f| %>
     <div class="form-group">
         <%= f.label "Your Post" %>
-        <%= f.text_area :body, class: "form-control"%>
+        <%= f.text_area :body, required: true, class: "form-control"%>
     </div>
     <%= f.submit "Post", class: "btn btn-primary"%>
 <% end %>

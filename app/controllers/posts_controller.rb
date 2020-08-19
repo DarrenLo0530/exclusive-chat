@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_member!, only: [:new, :create]
 
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at: :desc)
   end
 
   def new
@@ -15,7 +15,8 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to root_path, notice: "Succesfully created post!"
     else
-      render :new, notice: "Failed!"
+      flash.now.alert = "Missing fields!"
+      render :new
     end
   end
   

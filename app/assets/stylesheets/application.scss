@@ -19,10 +19,15 @@
 //Remove space between alerts and navbar
 .alert {
     margin-bottom: 0;
+    border-radius: 0;
 }
 
 //Apply spacing to navbar items
 .nav-item{
     margin-left: 1rem;
+}
+
+.footer {
+    padding: 1rem;
 }
 
