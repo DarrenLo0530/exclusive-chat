@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2020_08_18_034544) do
     t.string "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.index ["user_id"], name: "index_posts_on_user_id"
+    t.integer "member_id"
+    t.index ["member_id"], name: "index_posts_on_member_id"
   end
 
 end

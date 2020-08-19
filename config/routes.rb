@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :members
+  devise_for :members, controllers: {:registrations => 'registrations'}
   resources :posts, only: [:index, :new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

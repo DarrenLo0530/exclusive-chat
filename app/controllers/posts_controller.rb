@@ -7,15 +7,15 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = current_member.posts.build
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = current_member.posts.build(post_params)
     if @post.save
       redirect_to root_path, notice: "Succesfully created post!"
     else
-      render :new
+      render :new, notice: "Failed!"
     end
   end
   
